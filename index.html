@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Gayakwad | Software Engineer</title>
+    <title>Yash | Full-Stack Development, Cybersecurity & AI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -663,24 +663,205 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Modern glassmorphism refresh */
+        :root {
+            --primary: #9DFF00;
+            --secondary: #72C900;
+            --accent: #55D9FF;
+            --success: #55D9FF;
+            --dark: #050807;
+            --light: rgba(255,255,255,.045);
+            --gray: #9BA7A2;
+            --text: #F4F8F5;
+            --text-light: #C0CCC6;
+            --shadow: 0 18px 55px rgba(0,0,0,.35);
+        }
+        body {
+            background: radial-gradient(ellipse at 12% 8%, rgba(157,255,0,.09), transparent 34%),
+                        radial-gradient(ellipse at 88% 32%, rgba(85,217,255,.08), transparent 32%), #050807;
+        }
+        section { position: relative; }
+        .skill-category, .tech-category, .project-card, .blog-card, .activity-card,
+        .education-details, .timeline-content, .about-text {
+            background: linear-gradient(135deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0,0,0,.18);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+        .project-card, .skill-category, .tech-category, .blog-card, .activity-card {
+            transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+        }
+        .project-card:hover, .skill-category:hover, .tech-category:hover, .blog-card:hover, .activity-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(157,255,0,.45);
+            box-shadow: 0 20px 45px rgba(0,0,0,.32), 0 0 24px rgba(157,255,0,.06);
+        }
+        .btn { border-radius: 999px; }
+        .btn-accent { background: linear-gradient(120deg, var(--primary), var(--accent)); color: #061006; }
+        .tech-item, .skill { border: 1px solid rgba(157,255,0,.18); background: rgba(157,255,0,.055); }
+        .project-img { background: linear-gradient(135deg, rgba(157,255,0,.13), rgba(85,217,255,.13)); }
+        .hero-content p { max-width: 700px; }
+        .hero h3 { color: var(--text-light); }
+        .section-title h2 { letter-spacing: -.03em; }
+        .social-icons a { border: 1px solid rgba(255,255,255,.16); }
+        .footer-contact a { color: var(--primary); }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+        }
+
+
+        /* Reference-inspired black / cyan glass theme */
+        :root {
+            --primary: #35C9F4;
+            --secondary: #149DC7;
+            --accent: #69DDF8;
+            --success: #35C9F4;
+            --dark: #07090B;
+            --light: #111619;
+            --gray: #9AA9AF;
+            --text: #F5F7FA;
+            --text-light: #D1D9DE;
+            --white: #FFFFFF;
+            --shadow: 0 20px 60px rgba(0,0,0,.42);
+        }
+        html { background: #07090B; }
+        body {
+            background:
+                radial-gradient(ellipse at 50% 82%, rgba(28,178,219,.22), transparent 38%),
+                radial-gradient(ellipse at 12% 18%, rgba(255,255,255,.055), transparent 30%),
+                radial-gradient(ellipse at 92% 35%, rgba(39,190,231,.075), transparent 28%),
+                #07090B;
+            color: var(--text);
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            background: linear-gradient(135deg, rgba(255,255,255,.018), transparent 42%, rgba(34,190,231,.025));
+        }
+        header, header.scrolled {
+            background: rgba(9, 12, 14, .76);
+            border-bottom: 1px solid rgba(255,255,255,.11);
+            box-shadow: 0 8px 32px rgba(0,0,0,.28);
+            backdrop-filter: blur(22px) saturate(135%);
+            -webkit-backdrop-filter: blur(22px) saturate(135%);
+        }
+        .logo { color: #F6FAFC; }
+        .logo span, nav ul li a:hover, nav ul li a.active { color: var(--primary); }
+        nav ul li a { color: rgba(245,247,250,.84); }
+        h1 {
+            background: linear-gradient(105deg, #F8FBFD 8%, #53D6F8 48%, #1FB5E2 100%);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            filter: drop-shadow(0 0 22px rgba(53,201,244,.10));
+        }
+        h2, h3 { color: #48CFF2; }
+        h2:after { background: linear-gradient(90deg, #35C9F4, rgba(53,201,244,.12)); height: 3px; }
+        p { color: var(--text-light); }
+        .btn {
+            background: linear-gradient(135deg, #42D0F5, #149FC8);
+            color: #031015;
+            border: 1px solid rgba(255,255,255,.24);
+            box-shadow: 0 8px 26px rgba(31,181,226,.19), inset 0 1px 0 rgba(255,255,255,.32);
+        }
+        .btn:hover { box-shadow: 0 12px 34px rgba(31,181,226,.30); transform: translateY(-3px); }
+        .btn-accent { background: rgba(255,255,255,.055); color: #EAF9FD; border: 1px solid rgba(80,211,244,.48); }
+        .skill-category, .tech-category, .project-card, .blog-card, .activity-card,
+        .education-details, .timeline-content, .about-text {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.045) 48%, rgba(31,181,226,.065));
+            border: 1px solid rgba(220,245,252,.17);
+            border-radius: 25px;
+            box-shadow: 0 18px 48px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.12);
+            backdrop-filter: blur(22px) saturate(135%);
+            -webkit-backdrop-filter: blur(22px) saturate(135%);
+        }
+        .skill-category::before, .tech-category::before, .project-card::before,
+        .blog-card::before, .activity-card::before, .about-text::before, .education-details::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 8%; right: 8%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,.42), transparent);
+            pointer-events: none;
+        }
+        .project-card:hover, .skill-category:hover, .tech-category:hover, .blog-card:hover, .activity-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(53,201,244,.52);
+            box-shadow: 0 22px 52px rgba(0,0,0,.35), 0 0 30px rgba(53,201,244,.10), inset 0 1px 0 rgba(255,255,255,.15);
+        }
+        .skill, .tech-item, .project-tech span {
+            background: rgba(53,201,244,.075);
+            border: 1px solid rgba(53,201,244,.24);
+            color: #DDF8FF;
+            border-radius: 999px;
+        }
+        .project-img, .blog-img, .activity-img {
+            background: radial-gradient(ellipse at 50% 100%, rgba(53,201,244,.30), transparent 68%), linear-gradient(135deg, rgba(255,255,255,.075), rgba(53,201,244,.08));
+        }
+        .project-img i, .tech-item i { color: #48D1F2; }
+        .timeline:before { background: linear-gradient(to bottom, rgba(53,201,244,.85), rgba(53,201,244,.08)); }
+        .timeline-date { color: #4DD4F4; }
+        .social-icons a { border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.045); color: #DDF8FF; backdrop-filter: blur(12px); }
+        .social-icons a:hover { color: #061116; background: #35C9F4; border-color: #35C9F4; }
+        footer { background: rgba(3,5,6,.72); border-top: 1px solid rgba(255,255,255,.10); backdrop-filter: blur(16px); }
+        .footer-contact a, .footer-links a:hover { color: #43CFF2; }
+        input, textarea, select { background: rgba(255,255,255,.055); color: #F5F7FA; border: 1px solid rgba(255,255,255,.16); }
+        ::selection { background: rgba(53,201,244,.35); color: white; }
+        @media (max-width: 768px) {
+            .skill-category, .tech-category, .project-card, .blog-card, .activity-card,
+            .education-details, .timeline-content, .about-text { border-radius: 20px; }
+        }
+
     </style>
+
+<style id="luminous-glass-navbar">
+/* Luminous glass navigation inspired by the supplied reference */
+header, header.scrolled { background: transparent !important; border: 0 !important; box-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; padding: 12px 0; }
+.header-container { width: min(96%, 1720px); max-width: 1720px; gap: clamp(14px, 2vw, 36px); padding: 12px 18px; }
+.logo { flex: 0 0 auto; font-size: clamp(1.8rem, 2.6vw, 2.65rem); letter-spacing: -.055em; color: #f7fbff !important; text-shadow: 0 2px 16px rgba(255,255,255,.08); }
+.logo span { color: #24c9f3 !important; }
+.nav-links { flex: 1 1 auto; justify-content: space-between; align-items: center; gap: clamp(3px, .55vw, 12px); margin: 0; padding: 9px 12px; border: 1px solid rgba(232,250,255,.42); border-radius: 28px; background: linear-gradient(120deg,rgba(255,255,255,.16),rgba(255,255,255,.065) 45%,rgba(31,190,231,.10)); box-shadow: 0 12px 36px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.30),inset 0 -1px 0 rgba(255,255,255,.08),0 0 22px rgba(35,198,239,.10); backdrop-filter: blur(24px) saturate(155%); -webkit-backdrop-filter: blur(24px) saturate(155%); position: relative; overflow: hidden; }
+.nav-links::before { content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; background:linear-gradient(115deg,rgba(255,255,255,.15),transparent 22%,transparent 70%,rgba(50,210,246,.12)); }
+.nav-links li { margin:0; position:relative; z-index:1; }
+.nav-links a { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:13px clamp(8px, .85vw, 17px); border:1px solid transparent; border-radius:999px; color:rgba(248,252,255,.97) !important; font-size:clamp(.78rem,.91vw,1.03rem); font-weight:600; white-space:nowrap; text-shadow:0 1px 8px rgba(0,0,0,.35); transition:color .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease,transform .25s ease; }
+.nav-links a::after { display:none !important; }
+.nav-links a i { color:#61e2ff; font-size:1.15em; filter:drop-shadow(0 0 7px rgba(45,207,245,.38)); }
+.nav-links a:hover,.nav-links a.active { color:#fff !important; border-color:rgba(85,220,255,.78); background:linear-gradient(135deg,rgba(69,204,245,.26),rgba(15,177,220,.13)); box-shadow:inset 0 1px 0 rgba(255,255,255,.26),0 0 18px rgba(24,190,234,.22); transform:translateY(-1px); }
+.nav-links a:hover i,.nav-links a.active i { color:#38d7ff; }
+.mobile-menu-btn { flex:0 0 auto; color:#eafaff !important; padding:10px 13px; border:1px solid rgba(255,255,255,.3); border-radius:14px; background:rgba(255,255,255,.12); box-shadow:inset 0 1px 0 rgba(255,255,255,.18); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
+@media(max-width:1200px) { .header-container { width:98%; gap:12px; padding-inline:8px; } .nav-links { gap:0; padding:7px; } .nav-links a { gap:7px; padding:11px 8px; font-size:.80rem; } }
+@media(max-width:768px) {
+ header,header.scrolled { padding:7px 0; } .header-container { width:94%; padding:8px 0; flex-wrap:wrap; } .logo { font-size:2rem; }
+ .nav-links { position:fixed; top:82px; left:3%; width:94%; height:auto; max-height:calc(100vh - 100px); overflow-y:auto; padding:14px; flex-direction:column; align-items:stretch; justify-content:flex-start; gap:6px; border-radius:22px; background:rgba(9,18,24,.94); border:1px solid rgba(224,249,255,.34); box-shadow:0 18px 45px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12); backdrop-filter:blur(28px) saturate(150%); -webkit-backdrop-filter:blur(28px) saturate(150%); opacity:0; visibility:hidden; transform:translateY(-8px); transition:opacity .25s ease,transform .25s ease,visibility .25s ease; z-index:1001; }
+ .nav-links.active { left:3%; opacity:1; visibility:visible; transform:translateY(0); } .nav-links li { margin:0; width:100%; } .nav-links a { width:100%; justify-content:flex-start; padding:13px 15px; font-size:1rem; }
+}
+@media(prefers-reduced-motion:reduce) { .nav-links a { transition:none; } }
+</style>
+
 </head>
 <body>
     <!-- Header Section -->
     <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">Yash<span>.</span></a>
+            <a href="#home" class="logo">Yash<span>.</span></a>
             <div class="mobile-menu-btn" id="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#tech">Technologies</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="active" href="#home"><i class="fas fa-house" aria-hidden="true"></i><span>Home</span></a></li>
+                <li><a href="#about"><i class="far fa-user" aria-hidden="true"></i><span>About</span></a></li>
+                <li><a href="#skills"><i class="fas fa-code" aria-hidden="true"></i><span>Skills</span></a></li>
+                <li><a href="#tech"><i class="fas fa-layer-group" aria-hidden="true"></i><span>Technologies</span></a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase" aria-hidden="true"></i><span>Experience</span></a></li>
+                <li><a href="#projects"><i class="far fa-folder" aria-hidden="true"></i><span>Projects</span></a></li>
+                <li><a href="#blog"><i class="far fa-file-lines" aria-hidden="true"></i><span>Blog</span></a></li>
+                <li><a href="#activities"><i class="fas fa-shapes" aria-hidden="true"></i><span>Beyond Code</span></a></li>
+                <li><a href="#contact"><i class="far fa-paper-plane" aria-hidden="true"></i><span>Contact</span></a></li>
             </ul>
         </div>
     </header>
@@ -689,9 +870,10 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Yash Gayakwad</h1>
-                <h3>Software Engineer & CSE Student</h3>
-                <p>Passionate 2nd-year Computer Science student specializing in Python, JavaScript, and full-stack web development. Building innovative solutions with modern technologies.</p>
+                <p class="eyebrow">TECH ENTHUSIAST · INDORE, INDIA</p>
+                <h1>Hi, I'm Yash.</h1>
+                <h3>Aspiring Full-Stack Developer <span aria-hidden="true">|</span> Cybersecurity &amp; AI Enthusiast</h3>
+                <p>I'm a Computer Science Engineering student passionate about web development, artificial intelligence, cybersecurity, and cloud technologies. I enjoy learning new technologies and building practical projects that solve real-world problems. I'm currently developing my skills in Python, Django, web technologies, and infrastructure automation.</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn">View My Work</a>
                     <a href="#contact" class="btn btn-accent">Get In Touch</a>
@@ -717,23 +899,23 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm Yash Gayakwad, a passionate 2nd-year Computer Science and Engineering student with a strong interest in software development, web technologies, and problem-solving.</p>
-                    <p>I enjoy creating efficient and scalable solutions to real-world problems using modern technologies. My journey in programming started with Python, and I've since expanded my skills to include web development with HTML, CSS, JavaScript, and backend technologies.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or participating in coding competitions.</p>
+                    <p>I'm Yash, a Computer Science Engineering student passionate about web development, artificial intelligence, cybersecurity, and cloud technologies.</p>
+                    <p>I enjoy learning new technologies and building practical projects that solve real-world problems. My current toolkit includes Python, Django, HTML, CSS, and JavaScript, and I'm exploring infrastructure automation with Terraform.</p>
+                    <p>I'm looking for internship opportunities where I can learn from real-world challenges, strengthen my development skills, and contribute to useful products.</p>
                 </div>
                 <div class="education-details">
                     <h3>Education</h3>
                     <div class="education-item">
-                        <span class="education-date">2022 - 2026</span>
-                        <h4>Bachelor of Technology in Computer Science</h4>
+                        <span class="education-date">2024 - 2028</span>
+                        <h4>B.Tech in Computer Science Engineering</h4>
                         <p>Chameli Devi Group of Institutions</p>
-                        <p>Rajiv Gandhi University</p>
-                        <p>Currently in 2nd Year</p>
+                        <p>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)</p>
+                        <p>Currently pursuing · CGPA: 7.5</p>
                     </div>
                     <div class="education-item">
-                        <span class="education-date">2020 - 2022</span>
-                        <h4>Higher Secondary Education</h4>
-                        <p>Science Stream with Computer Science</p>
+                        <span class="education-date">2026</span>
+                        <h4>Python Full Stack Web Development</h4>
+                        <p>Certification · Samyak Computer Classes</p>
                     </div>
                 </div>
             </div>
@@ -743,39 +925,17 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <div class="section-title">
-                <h2>My Skills</h2>
-            </div>
+            <div class="section-title"><h2>Skills &amp; Toolkit</h2></div>
             <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-list">
-                        <div class="skill">Python</div>
-                        <div class="skill">JavaScript</div>
-                        <div class="skill">C/C++</div>
-                        <div class="skill">Java</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Web Development</h3>
-                    <div class="skill-list">
-                        <div class="skill">HTML5</div>
-                        <div class="skill">CSS3</div>
-                        <div class="skill">React</div>
-                        <div class="skill">Node.js</div>
-                        <div class="skill">Express</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skill-list">
-                        <div class="skill">Git & GitHub</div>
-                        <div class="skill">SQL Databases</div>
-                        <div class="skill">MongoDB</div>
-                        <div class="skill">REST APIs</div>
-                        <div class="skill">VS Code</div>
-                    </div>
-                </div>
+                <div class="skill-category"><h3>Languages</h3><div class="skill-list">
+                    <div class="skill">Python</div><div class="skill">JavaScript</div><div class="skill">C</div><div class="skill">C++</div><div class="skill">Java (Basic)</div>
+                </div></div>
+                <div class="skill-category"><h3>Web &amp; Backend</h3><div class="skill-list">
+                    <div class="skill">HTML5</div><div class="skill">CSS3</div><div class="skill">Django</div><div class="skill">Web Development</div>
+                </div></div>
+                <div class="skill-category"><h3>Databases &amp; Tools</h3><div class="skill-list">
+                    <div class="skill">MySQL</div><div class="skill">SQLite</div><div class="skill">PostgreSQL</div><div class="skill">Git</div><div class="skill">GitHub</div><div class="skill">VS Code</div><div class="skill">Terraform · Learning</div>
+                </div></div>
             </div>
         </div>
     </section>
@@ -783,37 +943,17 @@
     <!-- Technology Section -->
     <section id="tech">
         <div class="container">
-            <div class="section-title">
-                <h2>Technologies</h2>
-            </div>
+            <div class="section-title"><h2>What I Work With</h2></div>
             <div class="tech-container">
-                <div class="tech-category">
-                    <h3>Frontend</h3>
-                    <div class="tech-list">
-                        <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
-                        <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-                        <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
-                        <div class="tech-item"><i class="fab fa-react"></i> React</div>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3>Backend</h3>
-                    <div class="tech-list">
-                        <div class="tech-item"><i class="fab fa-python"></i> Python</div>
-                        <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
-                        <div class="tech-item"><i class="fas fa-database"></i> MongoDB</div>
-                        <div class="tech-item"><i class="fas fa-database"></i> MySQL</div>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3>Other</h3>
-                    <div class="tech-list">
-                        <div class="tech-item"><i class="fab fa-c"></i> C/C++</div>
-                        <div class="tech-item"><i class="fab fa-git-alt"></i> Git</div>
-                        <div class="tech-item"><i class="fas fa-code"></i> VS Code</div>
-                        <div class="tech-item"><i class="fas fa-server"></i> REST APIs</div>
-                    </div>
-                </div>
+                <div class="tech-category"><h3><i class="fas fa-code"></i> Web Development</h3><div class="tech-list">
+                    <div class="tech-item"><i class="fab fa-html5"></i> HTML</div><div class="tech-item"><i class="fab fa-css3-alt"></i> CSS</div><div class="tech-item"><i class="fab fa-js"></i> JavaScript</div><div class="tech-item"><i class="fas fa-leaf"></i> Django</div>
+                </div></div>
+                <div class="tech-category"><h3><i class="fas fa-database"></i> Databases</h3><div class="tech-list">
+                    <div class="tech-item"><i class="fas fa-database"></i> PostgreSQL</div><div class="tech-item"><i class="fas fa-database"></i> MySQL</div><div class="tech-item"><i class="fas fa-database"></i> SQLite</div>
+                </div></div>
+                <div class="tech-category"><h3><i class="fas fa-terminal"></i> Developer Tools</h3><div class="tech-list">
+                    <div class="tech-item"><i class="fab fa-python"></i> Python</div><div class="tech-item"><i class="fab fa-git-alt"></i> Git</div><div class="tech-item"><i class="fab fa-github"></i> GitHub</div><div class="tech-item"><i class="fas fa-cloud"></i> Terraform · Learning</div>
+                </div></div>
             </div>
         </div>
     </section>
@@ -821,93 +961,36 @@
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
-            <div class="section-title">
-                <h2>Internship & Experience</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <h3>Web Development Intern</h3>
-                        <p>ABC Tech Solutions</p>
-                        <p>Worked on front-end development for client projects using React.js and CSS frameworks. Collaborated with senior developers to implement responsive designs and optimize website performance.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2023</div>
-                    <div class="timeline-content">
-                        <h3>Python Programming Tutor</h3>
-                        <p>Freelance</p>
-                        <p>Provided one-on-one tutoring to beginners learning Python programming. Developed customized lesson plans and coding exercises to help students understand fundamental programming concepts.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2023</div>
-                    <div class="timeline-content">
-                        <h3>Open Source Contributor</h3>
-                        <p>GitHub Projects</p>
-                        <p>Contributed to various open-source projects focused on web development and Python libraries. Fixed bugs, improved documentation, and added new features to existing projects.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="section-title"><h2>Experience &amp; Learning</h2></div>
+            <div class="timeline"><div class="timeline-item"><div class="timeline-date">Now</div><div class="timeline-content">
+                <h3>Independent Developer · Personal Projects</h3>
+                <p>Building and improving personal projects to gain hands-on experience in web development, cybersecurity concepts, and practical software engineering.</p>
+                <p>Currently exploring Terraform and strengthening full-stack development skills with Python and Django.</p>
+            </div></div></div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <div class="section-title">
-                <h2>Projects</h2>
-            </div>
+            <div class="section-title"><h2>Featured Projects</h2></div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>E-Commerce Website</h3>
-                        <p>A full-featured e-commerce platform with user authentication, product catalog, shopping cart, and payment integration.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>Stripe API</span>
-                        </div>
-                        <a href="#" class="btn">View Details</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>AI Chatbot</h3>
-                        <p>An intelligent chatbot using natural language processing to answer queries and provide assistance for customer support.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>TensorFlow</span>
-                            <span>NLTK</span>
-                            <span>Flask</span>
-                        </div>
-                        <a href="#" class="btn">View Details</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Task Management App</h3>
-                        <p>A productivity application for managing daily tasks with features like reminders, categories, and progress tracking.</p>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>HTML/CSS</span>
-                            <span>Local Storage</span>
-                            <span>PWA</span>
-                        </div>
-                        <a href="#" class="btn">View Details</a>
-                    </div>
-                </div>
+                <div class="project-card"><div class="project-img"><i class="fas fa-shield-halved"></i></div><div class="project-info">
+                    <h3>CyberRakshak</h3>
+                    <p>A cybersecurity-focused web project that checks suspicious messages and links for phishing indicators. Its current detector uses rule-based signals such as suspicious URLs, urgency, credential requests, and money-related language to assign a risk level.</p>
+                    <div class="project-tech"><span>Python</span><span>Django</span><span>PostgreSQL</span><span>HTML/CSS/JS</span></div>
+                    <span class="project-status"><i class="fas fa-circle"></i> In progress</span>
+                </div></div>
+                <div class="project-card"><div class="project-img"><i class="fas fa-seedling"></i></div><div class="project-info">
+                    <h3>Kisan Setu</h3>
+                    <p>An agriculture-related project. Project-specific features, technology stack, and links will be added once the exact project details are confirmed.</p>
+                    <div class="project-tech"><span>Project details to be added</span></div>
+                </div></div>
+                <div class="project-card"><div class="project-img"><i class="fas fa-code"></i></div><div class="project-info">
+                    <h3>More projects coming soon</h3>
+                    <p>I'm continuing to build practical projects as I develop my skills in full-stack web development, cybersecurity, and cloud technologies.</p>
+                    <div class="project-tech"><span>Learning by building</span></div>
+                </div></div>
             </div>
         </div>
     </section>
@@ -915,34 +998,11 @@
     <!-- Blog Section -->
     <section id="blog">
         <div class="container">
-            <div class="section-title">
-                <h2>Blog & Articles</h2>
-            </div>
+            <div class="section-title"><h2>Blog &amp; Learning Notes</h2></div>
             <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-img"></div>
-                    <div class="blog-content">
-                        <h3>Getting Started with React Hooks</h3>
-                        <p>A comprehensive guide to understanding and implementing React Hooks in modern web applications.</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-img"></div>
-                    <div class="blog-content">
-                        <h3>Python for Web Scraping</h3>
-                        <p>Learn how to extract data from websites using Python libraries like BeautifulSoup and Scrapy.</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-img"></div>
-                    <div class="blog-content">
-                        <h3>Responsive Design Best Practices</h3>
-                        <p>Essential techniques for creating websites that work perfectly on all devices and screen sizes.</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+                <div class="blog-card"><div class="blog-img"></div><div class="blog-content"><h3>Learning Django</h3><p>Notes and lessons from building web applications with Python and Django.</p><span class="read-more">Coming soon <i class="fas fa-arrow-right"></i></span></div></div>
+                <div class="blog-card"><div class="blog-img"></div><div class="blog-content"><h3>Cybersecurity Fundamentals</h3><p>Exploring suspicious links, phishing indicators, and safer online practices through project work.</p><span class="read-more">Coming soon <i class="fas fa-arrow-right"></i></span></div></div>
+                <div class="blog-card"><div class="blog-img"></div><div class="blog-content"><h3>Terraform &amp; Cloud Learning</h3><p>Documenting my learning journey into infrastructure as code and cloud concepts.</p><span class="read-more">Coming soon <i class="fas fa-arrow-right"></i></span></div></div>
             </div>
         </div>
     </section>
@@ -950,31 +1010,11 @@
     <!-- Activities Section -->
     <section id="activities">
         <div class="container">
-            <div class="section-title">
-                <h2>Extra Activities</h2>
-            </div>
+            <div class="section-title"><h2>Beyond the Code</h2></div>
             <div class="activities-grid">
-                <div class="activity-card">
-                    <div class="activity-img"></div>
-                    <div class="activity-content">
-                        <h3>Coding Competitions</h3>
-                        <p>Regular participant in coding competitions on platforms like CodeChef, HackerRank, and LeetCode.</p>
-                    </div>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-img"></div>
-                    <div class="activity-content">
-                        <h3>Tech Club Member</h3>
-                        <p>Active member of college's Computer Science club, organizing workshops and tech talks.</p>
-                    </div>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-img"></div>
-                    <div class="activity-content">
-                        <h3>Open Source Contribution</h3>
-                        <p>Contributing to various open-source projects and maintaining personal projects on GitHub.</p>
-                    </div>
-                </div>
+                <div class="activity-card"><div class="activity-img"></div><div class="activity-content"><h3>Continuous Learning</h3><p>Exploring development tools and technologies, including Terraform, to broaden my engineering toolkit.</p></div></div>
+                <div class="activity-card"><div class="activity-img"></div><div class="activity-content"><h3>Building Personal Projects</h3><p>Turning ideas into practical applications and learning through implementation, iteration, and debugging.</p></div></div>
+                <div class="activity-card"><div class="activity-img"></div><div class="activity-content"><h3>Technology Exploration</h3><p>Following developments in full-stack web development, cybersecurity, AI, and cloud computing.</p></div></div>
             </div>
         </div>
     </section>
@@ -984,13 +1024,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <h3>Yash Gayakwad</h3>
-                    <p>Passionate software engineer and CSE student dedicated to creating innovative solutions with modern technologies.</p>
+                    <h3>Yash</h3>
+                    <p>Tech enthusiast and Computer Science Engineering student exploring full-stack development, cybersecurity, AI, and cloud technologies.</p>
                     <div class="social-icons">
                         <a href="https://instagram.com/indori_yash_07" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/Yashgayakwad1306" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yash-gayakwad-866566365" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+
                     </div>
                 </div>
                 <div class="footer-links">
@@ -1006,19 +1046,23 @@
                 </div>
                 <div class="footer-contact">
                     <h3>Contact Info</h3>
-                    <p><i class="fas fa-envelope"></i> ygayakwad1306@gmail.com</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:ygayakwad1306@gmail.com">ygayakwad1306@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+919399608845">+91 93996 08845</a></p>
                     <p><i class="fas fa-university"></i> Chameli Devi Group of Institutions</p>
-                    <p><i class="fas fa-graduation-cap"></i> Rajiv Gandhi University</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Indore, India</p>
+                    <p><i class="fas fa-graduation-cap"></i> Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Indore, Madhya Pradesh, India</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Yash Gayakwad. All Rights Reserved.</p>
+                <p>&copy; <span id="copyright-year"></span> Yash Gayakwad. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Keep the copyright year current automatically
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const navLinks = document.getElementById('nav-links');
